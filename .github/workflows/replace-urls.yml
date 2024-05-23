@@ -16,7 +16,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-     - name: Revert proxy URLs back to original
+    - name: Revert proxy URLs back to original
       run: |
         find . -type f -exec sed -i 's|https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/|https://raw.githubusercontent.com/|g' {} +
 
