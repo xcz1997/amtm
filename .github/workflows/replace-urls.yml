@@ -1,4 +1,4 @@
-name: Replace URLs in Files
+name: Replace urls
 
 on:
   push:
@@ -11,7 +11,6 @@ on:
 jobs:
   replace-urls:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
