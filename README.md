@@ -19,7 +19,7 @@ The transition for the built in amtm updater is seamless, no user action is requ
 Enter the complete command below into your favorite SSH terminal, then press Enter.
 
 ```Shell
-/usr/sbin/curl -Os https://diversion.ch/amtm/amtm && sh amtm
+/usr/sbin/curl -Os https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/xcz1997/amtm/master/amtm && sh amtm
 ```
 
 ### How to start amtm after installation or in Asuswrt-Merlin firmware 384.15 and newer
