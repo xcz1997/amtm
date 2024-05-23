@@ -5,7 +5,7 @@ AdGuardHome_installed(){
 	scriptgrep='^AI_VERSION'
 	[ -f /opt/etc/AdGuardHome/.config ] && . /opt/etc/AdGuardHome/.config
 	if [ "$su" = 1 ]; then
-		remoteurl=https://raw.githubusercontent.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer/master/installer
+		remoteurl=https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer/master/installer
 		grepcheck=SomeWhereOverTheRainBow
 		if [ "$ADGUARD_BRANCH" -a "$ADGUARD_BRANCH" = release ]; then
 			localAGHver="$(/opt/etc/AdGuardHome/AdGuardHome --version | cut -d" "  -f4-)"
@@ -79,7 +79,7 @@ install_AdGuardHome(){
 	printf " This installs AdGuardHome - Asuswrt-Merlin-AdGuardHome-Installer\\n on your router.\\n\\n"
 	printf " Author: SomeWhereOverTheRainBow\\n snbforums.com/threads/new-release-asuswrt-merlin-adguardhome-installer.76506/#post-733310\\n"
 	c_d
-	c_url -O https://raw.githubusercontent.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer/master/installer && sh installer
+	c_url -O https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer/master/installer && sh installer
 	sleep 2
 	if [ -f /opt/etc/AdGuardHome/installer ]; then
 		show_amtm " AdGuardHome installed"
