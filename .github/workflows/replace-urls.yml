@@ -12,6 +12,10 @@ on:
 jobs:
   replace-urls:
     runs-on: ubuntu-latest
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write      # 'write' access to pull requests
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -24,12 +28,5 @@ jobs:
       run: |
         find . -type f -exec sed -i 's|https://raw.githubusercontent.com/|https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/|g' {} +
 
-    - name: Commit changes
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add -A
-        git commit -m 'Replace raw.githubusercontent.com URLs with proxy'
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+    - name: GitHub Push
+      uses: ad-m/github-push-action@master
