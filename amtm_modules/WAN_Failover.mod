@@ -13,7 +13,7 @@ WAN_Failover_installed(){
 	fi
 
 	if [ "$su" = 1 ]; then
-		remoteurl=https://raw.githubusercontent.com/Ranger802004/asusmerlin/main/$branch
+		remoteurl=https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/Ranger802004/asusmerlin/main/$branch
 		grepcheck=Ranger802004
 	fi
 	script_check
@@ -47,7 +47,7 @@ install_WAN_Failover(){
 	printf " This installs Dual WAN Failover - replace the\\n factory ASUS WAN Failover functionality\\n on your router.\\n\\n"
 	printf " Author: Ranger802004\\n snbforums.com/threads/dual-wan-failover-v2-0-1-release.83674/\\n"
 	c_d
-	c_url https://raw.githubusercontent.com/Ranger802004/asusmerlin/main/wan-failover.sh -o "/jffs/scripts/wan-failover.sh" && chmod 755 /jffs/scripts/wan-failover.sh && sh /jffs/scripts/wan-failover.sh install
+	c_url https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/Ranger802004/asusmerlin/main/wan-failover.sh -o "/jffs/scripts/wan-failover.sh" && chmod 755 /jffs/scripts/wan-failover.sh && sh /jffs/scripts/wan-failover.sh install
 	sleep 2
 	if [ -f /jffs/scripts/wan-failover.sh ]; then
 		show_amtm " Dual WAN Failover installed"
