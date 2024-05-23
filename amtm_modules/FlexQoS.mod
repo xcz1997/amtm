@@ -4,7 +4,7 @@ FlexQoS_installed(){
 	scriptname='FlexQoS'
 	localVother="$(grep "^version=" /jffs/addons/flexqos/flexqos.sh | sed -e 's/version=//')"
 	if [ "$su" = 1 ]; then
-		remoteurl=https://raw.githubusercontent.com/dave14305/FlexQoS/master/flexqos.sh
+		remoteurl=https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/dave14305/FlexQoS/master/flexqos.sh
 		remoteVother="$(c_url "$remoteurl" | grep "^version=" | sed -e 's/version=//')"
 		grepcheck=FlexQoS
 	fi
@@ -30,7 +30,7 @@ install_FlexQoS(){
 	printf " This installs FlexQoS - Flexible QoS\\n Enhancement Script for Adaptive QoS\\n on your router.\\n\\n"
 	printf " Author: dave14305\\n snbforums.com/forums/asuswrt-merlin-addons.60/?prefix_id=8&starter_id=58901\\n"
 	c_d
-	c_url https://raw.githubusercontent.com/dave14305/FlexQoS/master/flexqos.sh -o /jffs/addons/flexqos/flexqos.sh --create-dirs && chmod +x /jffs/addons/flexqos/flexqos.sh && sh /jffs/addons/flexqos/flexqos.sh -install
+	c_url https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/dave14305/FlexQoS/master/flexqos.sh -o /jffs/addons/flexqos/flexqos.sh --create-dirs && chmod +x /jffs/addons/flexqos/flexqos.sh && sh /jffs/addons/flexqos/flexqos.sh -install
 	if [ -f /jffs/addons/flexqos/flexqos.sh ]; then
 		sleep 4
 		show_amtm " FlexQoS installed"
