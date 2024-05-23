@@ -4,7 +4,7 @@ MerlinAU_installed(){
 	scriptname=MerlinAU
 	scriptgrep=' SCRIPT_VERSION='
 	if [ "$su" = 1 ]; then
-		remoteurl=https://raw.githubusercontent.com/ExtremeFiretop/MerlinAutoUpdate-Router/main/MerlinAU.sh
+		remoteurl=https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/ExtremeFiretop/MerlinAutoUpdate-Router/main/MerlinAU.sh
 		grepcheck=ExtremeFiretop
 	fi
 	script_check
@@ -37,7 +37,7 @@ install_MerlinAU(){
 	printf " Major contributor: Martinski\\n"
 	c_d
 	clear
-	c_url https://raw.githubusercontent.com/ExtremeFiretop/MerlinAutoUpdate-Router/main/MerlinAU.sh -o /jffs/scripts/MerlinAU.sh && chmod 0755 /jffs/scripts/MerlinAU.sh && /jffs/scripts/MerlinAU.sh
+	c_url https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/ExtremeFiretop/MerlinAutoUpdate-Router/main/MerlinAU.sh -o /jffs/scripts/MerlinAU.sh && chmod 0755 /jffs/scripts/MerlinAU.sh && /jffs/scripts/MerlinAU.sh
 	sleep 2
 	if [ -f /jffs/scripts/MerlinAU.sh ]; then
 		show_amtm " MerlinAU installed"
