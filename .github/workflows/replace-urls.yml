@@ -35,3 +35,5 @@ jobs:
         git commit -a -m "replace urls"
     - name: GitHub Push
       uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT }}
