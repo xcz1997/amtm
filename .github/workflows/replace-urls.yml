@@ -32,4 +32,4 @@ jobs:
         git commit -m 'Replace raw.githubusercontent.com URLs with proxy'
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.amtm-repo-push }}
