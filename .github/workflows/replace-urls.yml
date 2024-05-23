@@ -28,5 +28,10 @@ jobs:
       run: |
         find . -type f -exec sed -i 's|https://raw.githubusercontent.com/|https://proxy.muuua.cn/proxy/https://raw.githubusercontent.com/|g' {} +
 
+    - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "replace urls"
     - name: GitHub Push
       uses: ad-m/github-push-action@master
